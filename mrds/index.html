@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mrds14.com-网址导航与资源聚合入口_mrds14.com 首页说明与使用指引</title>
+<meta name="description" content="mrds14.com 是一个网址聚合与资源导航入口页面，提供站点导航、常用分类索引、使用说明与常见问题，帮助访问者快速了解 mrds14.com 的定位、访问方式与栏目结构。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f2b3d'/%3E%3Cpath d='M18 44V20h7l7 12 7-12h7v24h-6V31l-8 13-8-13v13z' fill='%2332c5a0'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0f2b3d;
+  --ink-soft:#2c4a5c;
+  --muted:#5c7484;
+  --line:#dbe5ea;
+  --bg:#f5f8fa;
+  --card:#ffffff;
+  --accent:#1f8a70;
+  --accent-2:#32c5a0;
+  --warm:#f2a65a;
+  --radius:14px;
+  --shadow:0 6px 24px rgba(15,43,61,.07);
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,-apple-system,sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  font-size:16px;
+}
+a{color:var(--accent);text-decoration:none;}
+a:hover{text-decoration:underline;}
+img,svg{max-width:100%;}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 20px;}
+
+/* header */
+.site-header{
+  background:var(--ink);
+  color:#e8f2f4;
+  position:sticky;top:0;z-index:50;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:12px 20px;max-width:1120px;margin:0 auto;flex-wrap:wrap;
+}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.4px;}
+.brand .mark{
+  width:34px;height:34px;border-radius:9px;background:linear-gradient(140deg,#32c5a0,#1f8a70);
+  display:grid;place-items:center;flex:none;
+}
+.brand .mark svg{width:20px;height:20px;}
+.brand .name{font-size:16px;color:#fff;}
+.nav{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+.nav a{
+  color:#c8dbe2;font-size:14px;padding:6px 10px;border-radius:8px;
+}
+.nav a:hover{background:rgba(255,255,255,.08);color:#fff;text-decoration:none;}
+
+/* hero */
+.hero{
+  background:
+    radial-gradient(900px 340px at 85% -10%,rgba(50,197,160,.18),transparent 60%),
+    linear-gradient(180deg,#0f2b3d 0%,#133a4d 100%);
+  color:#eaf4f6;
+  padding:52px 0 46px;
+}
+.hero-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:38px;align-items:center;}
+.hero .eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;color:#8fd9c6;background:rgba(50,197,160,.12);
+  border:1px solid rgba(50,197,160,.3);padding:4px 12px;border-radius:999px;
+  margin-bottom:16px;
+}
+h1{
+  font-size:clamp(28px,4.4vw,44px);
+  line-height:1.2;margin:0 0 16px;font-weight:800;color:#fff;
+  word-break:break-word;
+}
+.hero p.lead{
+  font-size:16px;color:#c6dbe2;margin:0 0 26px;max-width:560px;
+}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:11px 20px;border-radius:10px;font-size:15px;font-weight:600;
+  border:1px solid transparent;cursor:pointer;transition:.18s;
+}
+.btn-primary{background:var(--accent-2);color:#062b22;}
+.btn-primary:hover{background:#4ad4b1;text-decoration:none;}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:#eaf4f6;}
+.btn-ghost:hover{background:rgba(255,255,255,.08);text-decoration:none;}
+.btn[aria-disabled="true"]{opacity:.6;cursor:default;}
+
+.hero-card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius);
+  padding:20px;
+}
+.hero-card h2{font-size:14px;margin:0 0 12px;color:#9fd8c9;font-weight:600;letter-spacing:.5px;}
+.mini-list{list-style:none;margin:0;padding:0;display:grid;gap:10px;}
+.mini-list li{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#d3e5ea;}
+.mini-list .dot{
+  width:7px;height:7px;border-radius:50%;background:var(--accent-2);
+  margin-top:9px;flex:none;
+}
+
+/* section */
+section{padding:54px 0;}
+.section-head{margin-bottom:26px;max-width:720px;}
+.section-head h2{
+  font-size:clamp(20px,2.6vw,26px);margin:0 0 8px;font-weight:700;
+  letter-spacing:.2px;
+}
+.section-head p{margin:0;color:var(--muted);font-size:15px;}
+
+/* nav cards */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:var(--shadow);
+}
+.card .ico{
+  width:40px;height:40px;border-radius:10px;background:#e7f5f1;
+  display:grid;place-items:center;margin-bottom:14px;
+}
+.card .ico svg{width:20px;height:20px;stroke:var(--accent);}
+.card h3{font-size:17px;margin:0 0 8px;font-weight:700;}
+.card p{margin:0;font-size:14.5px;color:var(--ink-soft);}
+.card .tag{
+  display:inline-block;margin-top:12px;font-size:12px;color:var(--accent);
+  background:#e7f5f1;border-radius:6px;padding:2px 8px;
+}
+
+/* guide list */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;}
+.steps{list-style:none;margin:0;padding:0;counter-reset:step;}
+.steps li{
+  display:flex;gap:14px;padding:16px 0;border-bottom:1px dashed var(--line);
+}
+.steps li:last-child{border-bottom:none;}
+.steps .num{
+  flex:none;width:30px;height:30px;border-radius:50%;
+  background:var(--ink);color:#fff;font-size:14px;font-weight:700;
+  display:grid;place-items:center;
+}
+.steps h4{margin:0 0 4px;font-size:15.5px;}
+.steps p{margin:0;font-size:14px;color:var(--muted);}
+
+.aside-note{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:var(--shadow);
+}
+.aside-note h3{margin:0 0 10px;font-size:16px;}
+.aside-note p{margin:0 0 12px;font-size:14px;color:var(--ink-soft);}
+.aside-note p:last-child{margin-bottom:0;}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.badge-row span{
+  font-size:12.5px;color:var(--ink-soft);border:1px solid var(--line);
+  border-radius:999px;padding:3px 10px;background:#fafcfd;
+}
+
+/* directory */
+.dir-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.dir-item{
+  display:flex;gap:14px;align-items:flex-start;
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;
+}
+.dir-item .k{
+  flex:none;width:36px;height:36px;border-radius:9px;
+  background:linear-gradient(140deg,#1f8a70,#32c5a0);color:#fff;
+  font-size:13px;font-weight:700;display:grid;place-items:center;
+}
+.dir-item h4{margin:0 0 4px;font-size:15px;}
+.dir-item p{margin:0;font-size:13.8px;color:var(--muted);}
+
+/* faq */
+.faq{display:grid;gap:12px;}
+details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;padding:0 18px;
+}
+details[open]{box-shadow:var(--shadow);}
+summary{
+  cursor:pointer;padding:16px 0;font-weight:600;font-size:15.5px;
+  list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+summary::-webkit-details-marker{display:none;}
+summary::after{
+  content:"+";color:var(--accent);font-size:18px;font-weight:700;flex:none;
+}
+details[open] summary::after{content:"–";}
+details p{margin:0 0 16px;font-size:14.5px;color:var(--ink-soft);}
+
+/* footer */
+.site-footer{
+  background:var(--ink);color:#a9c2cc;padding:38px 0 26px;margin-top:20px;
+  font-size:14px;
+}
+.footer-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:22px;}
+.footer-brand{font-weight:700;color:#fff;font-size:16px;}
+.footer-top p{margin:8px 0 0;max-width:460px;color:#9db8c2;font-size:13.5px;}
+.footer-links{display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;}
+.footer-links a{color:#bcd4dc;font-size:13.5px;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding-top:18px;
+  font-size:12.5px;color:#7f9aa5;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;}
+  .grid-3{grid-template-columns:1fr 1fr;}
+  .split{grid-template-columns:1fr;}
+}
+@media (max-width:640px){
+  body{font-size:15.5px;}
+  .hero{padding:38px 0 34px;}
+  section{padding:38px 0;}
+  .grid-3,.dir-grid{grid-template-columns:1fr;}
+  .header-inner{padding:10px 16px;}
+  .nav a{padding:5px 8px;font-size:13px;}
+  .btn{width:100%;justify-content:center;}
+  .cta-row{flex-direction:column;}
+  .footer-bottom{flex-direction:column;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#062b22" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19V5h3l5 8 5-8h3v14"/>
+        </svg>
+      </span>
+      <span class="name">mrds14.com</span>
+    </div>
+    <nav class="nav" aria-label="主导航">
+      <a href="#intro">站点简介</a>
+      <a href="#guide">使用指引</a>
+      <a href="#directory">栏目索引</a>
+      <a href="#faq">常见问题</a>
+      <a href="#access">访问入口</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">网址导航 · 资源聚合入口</span>
+      <h1>mrds14.com</h1>
+      <p class="lead">mrds14.com 是一个面向日常浏览的网址聚合与导航入口页面。它把分散的站点入口、分类索引与使用说明集中在一处，让访问者不必反复记忆地址，也能按栏目找到需要的方向。</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#directory">查看栏目索引</a>
+        <a class="btn btn-ghost" href="#guide">阅读使用指引</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h2>页面速览</h2>
+      <ul class="mini-list">
+        <li><span class="dot"></span><span>定位：网址导航与资源聚合的入口页面</span></li>
+        <li><span class="dot"></span><span>内容：站点简介、使用指引、栏目索引与常见问题</span></li>
+        <li><span class="dot"></span><span>方式：按分类浏览，或直接使用页面内锚点跳转</span></li>
+        <li><span class="dot"></span><span>适配：桌面端与手机端均可正常阅读</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <section id="intro">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>关于 mrds14.com 的定位</h2>
+        <p>先理解这个页面做什么，再决定从哪里开始浏览。</p>
+      </div>
+      <div class="grid-3">
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14 0 18"/></svg>
+          </div>
+          <h3>聚合入口</h3>
+          <p>mrds14.com 把常用的站点方向收拢在同一页面，通过分类与索引组织内容，减少在不同地址之间来回切换的成本。</p>
+          <span class="tag">集中浏览</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          </div>
+          <h3>清晰分类</h3>
+          <p>页面按用途划分栏目，每个栏目配有一段简短说明，说明该栏目收录什么、适合什么场景，方便按需查找。</p>
+          <span class="tag">按类查找</span>
+        </article>
+        <article class="card">
+          <div class="ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+          </div>
+          <h3>使用说明</h3>
+          <p>对于第一次访问的读者，页面提供逐步指引与常见问题，说明如何找到入口、如何判断栏目归属以及如何反馈。</p>
+          <span class="tag">快速上手</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+    <div class="wrap split">
+      <div>
+        <div class="section-head">
+          <h2>第一次访问的使用指引</h2>
+          <p>按顺序完成下面几步，即可顺畅使用 mrds14.com 的导航功能。</p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="num">1</span>
+            <div>
+              <h4>确认页面身份</h4>
+              <p>浏览器地址栏显示的域名即 mrds14.com，页面左上角品牌文字与标题一致，避免进入仿冒页面。</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <div>
+              <h4>选择栏目方向</h4>
+              <p>浏览“栏目索引”一节，根据用途选择分类；每个条目都附有简短说明，帮助判断是否符合当前需求。</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <div>
+              <h4>进入目标入口</h4>
+              <p>点击对应条目即可前往目标站点。若某条入口暂未开放，页面会以禁用状态显示，不会产生错误跳转。</p>
+            </div>
+          </li>
+          <li>
+            <span class="num">4</span>
+            <div>
+              <h4>回退与再次查找</h4>
+              <p>使用浏览器返回键可回到 mrds14.com 继续查找；页面顶部的导航锚点也支持在栏目之间快速跳转。</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <aside class="aside-note">
+        <h3>阅读小提示</h3>
+        <p>页面中的栏目说明只描述结构与用途，不承诺第三方站点的具体内容、服务状态或可用性，实际体验以目标站点为准。</p>
+        <p>若你通过移动网络访问，建议在流量充足的环境下浏览，避免因页面资源加载中断而误以为入口失效。</p>
+        <p>遇到页面显示异常时，可先刷新一次；仍无法恢复时，再通过页尾说明了解反馈方式。</p>
+        <div class="badge-row">
+          <span>桌面与手机适配</span>
+          <span>锚点导航</span>
+          <span>静态内容</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="directory">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>栏目索引</h2>
+        <p>mrds14.com 的栏目围绕日常浏览需求设置，以下为各栏目的职责与适用场景。</p>
+      </div>
+      <div class="dir-grid">
+        <div class="dir-item">
+          <span class="k">A</span>
+          <div>
+            <h4>综合导航</h4>
+            <p>收录覆盖面较广的常用站点方向，适合不确定具体归类时先从这一栏开始浏览。</p>
+          </div>
+        </div>
+        <div class="dir-item">
+          <span class="k">B</span>
+          <div>
+            <h4>工具与查询</h4>
+            <p>面向日常查询与轻量工具类需求，方便在同一个入口页面内找到相应方向。</p>
+          </div>
+        </div>
+        <div class="dir-item">
+          <span class="k">C</span>
+          <div>
+            <h4>内容与阅读</h4>
+            <p>聚合资讯与阅读类方向，适合需要集中浏览信息内容的访问者按类查找。</p>
+          </div>
+        </div>
+        <div class="dir-item">
+          <span class="k">D</span>
+          <div>
+            <h4>使用与帮助</h4>
+            <p>放置页面说明、常见问题与反馈渠道，帮助新访问者理解 mrds14.com 的使用方式。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" style="background:#fff;border-top:1px solid var(--line);">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>常见问题</h2>
+        <p>围绕 mrds14.com 的访问与使用，整理了几类高频疑问。</p>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>mrds14.com 是什么类型的网站？</summary>
+          <p>mrds14.com 是一个网址聚合与导航型入口页面，主要作用是把分散的站点方向按栏目集中呈现，并提供使用说明与常见问题，方便访问者按需查找。它本身不生产第三方站点的内容。</p>
+        </details>
+        <details>
+          <summary>页面上的入口为什么有的不可点击？</summary>
+          <p>部分入口处于待补充状态，页面会以禁用样式显示，并标记为不可交互，避免访问者点击后进入无效地址。当你看到这类状态时，说明该条目尚未开放。</p>
+        </details>
+        <details>
+          <summary>在手机上访问 mrds14.com 是否方便？</summary>
+          <p>页面针对小屏做了适配：导航可换行、卡片改为单列、按钮占满宽度。手机端首屏优先展示标题与简介，装饰性图形不会遮挡主要内容。</p>
+        </details>
+        <details>
+          <summary>如何反馈栏目建议或失效入口？</summary>
+          <p>可以通过页尾提供的说明了解反馈途径。反馈时建议注明所在栏目、条目名称与问题现象，便于核对与处理；处理结果以页面后续更新为准。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="access">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>访问入口与后续计划</h2>
+        <p>从首页出发，你可以直接进入栏目索引，也可以先阅读使用指引。</p>
+      </div>
+      <div class="split">
+        <div class="aside-note">
+          <h3>立即可用的入口</h3>
+          <p>“栏目索引”适合已经明确需求的访问者，按分类快速定位；“使用指引”适合首次访问者，按步骤了解页面结构。</p>
+          <div class="cta-row" style="margin-top:16px;">
+            <a class="btn btn-primary" href="#directory" style="flex:none;">前往栏目索引</a>
+            <a class="btn btn-ghost" href="#guide" style="flex:none;border-color:var(--line);color:var(--ink);">查看使用指引</a>
+          </div>
+        </div>
+        <div class="aside-note">
+          <h3>下载页面说明</h3>
+          <p>mrds14.com 的页面说明文件正在整理中，整理完成后将在此处提供下载。当前下载入口暂未开放，请稍后再来查看。</p>
+          <div class="cta-row" style="margin-top:16px;">
+            <a class="btn btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none;opacity:.6;flex:none;">下载</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">mrds14.com</div>
+        <p>mrds14.com 是网址聚合与导航入口页面，提供栏目索引、使用指引与常见问题，帮助访问者更快找到所需方向。</p>
+      </div>
+      <div class="footer-links">
+        <a href="#intro">站点简介</a>
+        <a href="#guide">使用指引</a>
+        <a href="#directory">栏目索引</a>
+        <a href="#faq">常见问题</a>
+        <a href="#access">访问入口</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© mrds14.com · 页面内容以实际更新为准</span>
+      <span>栏目说明仅描述页面结构，第三方站点内容由对应站点负责</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
